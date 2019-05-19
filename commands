@@ -1,0 +1,27 @@
+Terminal 1:
+-Запуск gulp
+gulp
+
+Terminal 2:
+-Запуск локального сервера
+cd env/Scripts
+activate.bat
+cd ..
+cd ..
+python manage.py runserver
+
+______________________________________
+ДОПОЛНИТЕЛЬНО
+
+
+-Перезапуск терминала
+Ctrl+PauseBreak
+
+-Команды Django
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+
+
+
+

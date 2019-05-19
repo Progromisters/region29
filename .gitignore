@@ -1,0 +1,7 @@
+.idea/
+env/
+node_modules/
+main/migrations/
+static/assets/libs/*
+/package.json
+/package-lock.json
