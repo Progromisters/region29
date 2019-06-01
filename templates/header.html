@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<header class="header">
+  <div class="contaner">
+    <div class="header__item">
+      <div class="main-logo">
+        <img class="logo" src="{% static '/img/logo.jpg' %}" alt="Логотип" width="100%" height="100%">
+      </div>
+      <div class="info">
+        <p class="info__phone">+7 902 252 72 02</p>
+        <p class="info__adress">г.Северодвинск, ул. Пионерская, 14а/24, офис 8</p>
+      </div>
+    </div>
+    <div class="header__item">
+      <button class="button button--big header__button">Записаться</button>
+    </div>
+  </div>
+  <nav class="header__nav">
+    <div class="wrapper">
+      <ul class="nav main-nav">
+        <li class="nav__item"><a href="#">Главная</a></li>
+        <li class="nav__item"><a href="#">Цены</a></li>
+        <li class="nav__item"><a href="#">Отзывы</a></li>
+        <li class="nav__item"><a href="#">Инструкторы</a></li>
+        <li class="nav__item"><a href="#">Лицензии</a></li>
+        <li class="nav__item"><a href="#">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
