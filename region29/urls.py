@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """region29 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
