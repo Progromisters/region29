@@ -49,3 +49,4 @@ rimraf node_modules/  	# быстрое удаление node_modules
 -Проверить версию
 npm -v
 gulp -v
+
