@@ -5,3 +5,4 @@ static/assets/libs/*
 /package.json
 /package-lock.json
 .vscode/
+/smart-grid-config.js

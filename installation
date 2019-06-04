@@ -25,8 +25,9 @@ npm i gulp-sass gulp-concat gulp-uglifyjs gulp-clean-css gulp-rename gulp-autopr
 -Скачать git
 
 -Скачивание библиотек
-bower i jquery bootstrap
+bower i jquery bootstrap fontawesome
 
+fontawesome - иконки
 ________________________________________
 ДОПОЛНИТЕЛЬНО
 
@@ -49,3 +50,4 @@ rimraf node_modules/  	# быстрое удаление node_modules
 -Проверить версию
 npm -v
 gulp -v
+
