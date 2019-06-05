@@ -1,1 +1,104 @@
 @import "slider"
+
+.price
+  +wrapper()
+  padding: 0
+  overflow: hidden
+  cursor: pointer
+  &__list
+    +row-flex()
+    margin: 0
+  &__item
+    +col()
+    width: 50%
+    margin: 0
+    background-color: $yellow 
+
+.cat
+  position: relative
+  padding: 3.5em 0
+  font-family: Roboto
+  &__name
+    line-height: 0.6em
+    position: relative
+    color: $white
+    font-size: 15em
+    font-weight: bold
+    z-index: 1  
+  &__img
+    position: absolute
+    width: 50%
+    top: 1.5em
+    &--auto
+      left: 7em
+    &--moto
+      right: 7em
+      width: 40%
+  &__content
+    position: absolute
+    top: 3em
+    &--auto
+      right: 3em
+    &--moto
+      left: 3em
+  &__price
+    font-size: 4.2em
+    font-weight: bold
+    color: $coal
+    &--auto
+      right: 0
+    &--moto
+      left: 0
+  &__text
+    position: absolute
+    width: 6em
+    font-size: 2em
+    font-weight: bold
+    color: $coal
+    &--auto
+      text-align: right
+      right: 0
+    &--moto
+      text-align: left
+      left: 0
+  &--auto
+    text-align: left
+    padding-left: 5em
+    &:hover
+      position: relative
+      z-index: 1
+      box-shadow: 1em 1em 2em 1em rgba(0,0,0,0.75);
+      transform: scale(1.1)
+  &--moto
+    text-align: right
+    padding-right: 5em
+    &:hover
+      position: relative
+      z-index: 1
+      box-shadow: -1em 1em 2em 1em rgba(0,0,0,0.75);
+      transform: scale(1.1)
+
+.features
+  +wrapper()
+  &__list
+    +row-flex()
+    margin: 0
+  &__item
+    +col()
+    width: 25%
+    margin: 0
+    padding: 5em
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-color: $coal
+    color: $white
+    &:nth-child(even)
+      background-color: $gray
+  &__icon
+    font-size: 3.7em
+  &__text
+    margin-top: 0.5em
+    font-family: Roboto
+    text-align: center
+    font-size: 1.4em

@@ -6,38 +6,82 @@
 {% endblock %}
 
 {% block content %}
-<div class="slider" style="background:  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url({% static '/img/slider.jpg' %}) center/cover no-repeat">
-  <article class="slider__item">
-    <h3 class="slider__header">
-      Lorem, ipsum dolor.
-    </h3>
-    <p class="slider__text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, soluta.
-    </p>
-  </article>
-  <article class="slider__item">
-    <h3 class="slider__header">
-      Lorem, ipsum dolor.
-    </h3>
-    <p class="slider__text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, soluta.
-    </p>
-  </article>
-  <article class="slider__item">
-    <h3 class="slider__header">
-      Lorem, ipsum dolor.
-    </h3>
-    <p class="slider__text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, soluta.
-    </p>
-  </article>
-  <article class="slider__item">
-    <h3 class="slider__header">
-      Lorem, ipsum dolor.
-    </h3>
-    <p class="slider__text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, soluta.
-    </p>
-  </article>
-</div>
+<main class="main">
+  <div class="slider" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url({% static '/img/slider.jpg' %}) center/cover no-repeat">
+    <article class="slider__item">
+      <h3 class="slider__header">
+        Lorem, ipsum dolor.
+      </h3>
+      <p class="slider__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, soluta.
+      </p>
+    </article>
+    <article class="slider__item">
+      <h3 class="slider__header">
+        Lorem, ipsum dolor.
+      </h3>
+      <p class="slider__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, soluta.
+      </p>
+    </article>
+    <article class="slider__item">
+      <h3 class="slider__header">
+        Lorem, ipsum dolor.
+      </h3>
+      <p class="slider__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, soluta.
+      </p>
+    </article>
+    <article class="slider__item">
+      <h3 class="slider__header">
+        Lorem, ipsum dolor.
+      </h3>
+      <p class="slider__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, soluta.
+      </p>
+    </article>
+  </div>
+  <section class="price">
+    <h2 class="hidden">Цены</h2>
+    <ul class="price__list">
+      <li class="price__item cat cat--auto">
+        <img class="cat__img cat__img--auto" src="{% static '/img/auto.png' %}" alt="Категория B">
+        <p class="cat__name">B</p>
+        <div class="cat__content cat__content--auto">   
+          <p class="cat__price cat__price--auto">30 000₽</p>
+          <p class="cat__text cat__text--auto">Права категории B</p>
+        </div>     
+      </li>
+      <li class="price__item cat cat--moto">
+        <img class="cat__img cat__img--moto" src="{% static '/img/moto.png' %}" alt="Категория А">
+        <p class="cat__name">А</p>
+        <div class="cat__content cat__content--moto">
+          <p class="cat__price cat__price--moto">12 000₽</p>
+          <p class="cat__text cat__text--moto">Права категории А</p>
+        <div class="cat__content">   
+      </li>
+    </ul>
+  </section>
+  <section class="features">
+    <h2 class="hidden">Преимущества Автошколы Регион29</h2>
+    <ul class="features__list">
+      <li class="features__item">
+        <i class="fas fa-wallet features__icon"></i>
+        <p class="features__text">Беспроцентная рассрочка платежа</p>
+      </li>
+      <li class="features__item">
+        <i class="fas fa-user-graduate features__icon"></i>
+        <p class="features__text">Обучение и экзамен в ГИБДД с 17 лет</p>
+      </li>
+      <li class="features__item">
+        <i class="fas fa-award features__icon"></i>
+        <p class="features__text">60% учеников получают права с 1 раза</p>
+      </li>
+      <li class="features__item">
+        <i class="fas fa-city features__icon"></i>
+        <p class="features__text">Автодром в центре города (ДК “Строитель”)</p>
+      </li>
+    </ul>
+  </section>
+</main>
 {% endblock %}
