@@ -80,6 +80,8 @@
 
 .features
   +wrapper()
+  overflow: hidden
+  padding: 0
   &__list
     +row-flex()
     margin: 0
@@ -92,11 +94,13 @@
     flex-direction: column
     align-items: center
     background-color: $coal
+    box-shadow: 0 0 2em 0 #000000;
     color: $white
     &:nth-child(even)
       background-color: $gray
+      z-index: 0
   &__icon
-    font-size: 3.7em
+    font-size: 3.8em
   &__text
     margin-top: 0.5em
     font-family: Roboto
