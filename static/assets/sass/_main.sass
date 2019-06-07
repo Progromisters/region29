@@ -24,16 +24,16 @@
     color: $white
     font-size: 15em
     font-weight: bold
-    z-index: 1  
+    z-index: 1
   &__img
     position: absolute
-    width: 50%
+    width: 23em
     top: 1.5em
     &--auto
-      left: 7em
+      left: 5em
     &--moto
-      right: 7em
-      width: 40%
+      right: 5em
+      width: 18em
   &__content
     position: absolute
     top: 3em
@@ -63,7 +63,7 @@
       left: 0
   &--auto
     text-align: left
-    padding-left: 5em
+    padding-left: 3em
     &:hover
       position: relative
       z-index: 1
@@ -71,12 +71,13 @@
       transform: scale(1.1)
   &--moto
     text-align: right
-    padding-right: 5em
+    padding-right: 3em
     &:hover
       position: relative
       z-index: 1
       box-shadow: -1em 1em 2em 1em rgba(0,0,0,0.75);
       transform: scale(1.1)
+
 
 .features
   +wrapper()
@@ -106,3 +107,45 @@
     font-family: Roboto
     text-align: center
     font-size: 1.4em
+
+.sale
+  +wrapper()
+  padding: 0
+  position: relative
+  cursor: pointer
+  background-color: $yellow
+  font-family: Roboto
+  &__wrapper
+    position: relative
+    padding: 3.5em
+  &__img
+    position: absolute
+    top: 1.5em
+    &--auto
+      left: 20em      
+      width: 23em
+    &--moto
+      transform: scaleX(-1)
+      left: 30em
+      width: 18em
+  &__cat
+    line-height: 0.6em
+    letter-spacing: -0.06em
+    position: relative
+    color: $white
+    font-size: 15em
+    font-weight: bold
+    z-index: 1
+  &__content
+    width: 30%
+    position: absolute
+    top: 3em
+    right: 3em
+    color: $coal 
+  &__header
+    font-size: 2.5em
+    font-weight: bold
+  &__text
+    margin-top: 0.5em
+    font-size: 1.3em
+    font-weight: bold
