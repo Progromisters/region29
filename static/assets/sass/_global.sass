@@ -4,7 +4,7 @@ body
   font-size: 13px
 
 
-.contaner
+.container
   +row-flex()
   +size(12)
   +wrapper()
@@ -14,8 +14,15 @@ body
   font-family: Roboto
   font-weight: bold
   text-transform: uppercase
-  border: 1px solid;
-  border-radius: 0.2em;
+  border: 1px solid
+  border-radius: 0.2em
+
+.hidden
+  position: absolute
+  clip: rect(0 0 0 0)
+  width: 1px
+  height: 1px
+  margin: -1px
 
 .wrapper
   +wrapper()
