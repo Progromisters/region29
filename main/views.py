@@ -13,8 +13,7 @@ def feedback(request):
     if request.POST:
         name = request.POST["name"]
         phone = request.POST["phone"]
-        print(name)
-        print(phone)
+
         # Client.objects.create(
         #     name=name,
         #     phone=phone

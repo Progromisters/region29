@@ -5,8 +5,6 @@
   <form id="form" action="{% url 'feedback' %}" method="POST" class="app__form">{% csrf_token %}
       {{ form.name }}
       {{ form.phone }}
-{#    <input id="name" class="app__input" type="text" name="name" placeholder="Ваше имя">#}
-{#    <input id="phone" class="app__input" type="text" name="phone" placeholder="Ваш телефон">#}
     <button class="app__submit button" type="submit">Отправить</button>
   </form>
 </section>
