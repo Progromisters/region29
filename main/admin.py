@@ -1,4 +1,11 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
+from .models import Client
 
-# Register your models here.
+class ClientAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in Client._meta.fields]
+    
+    class Meta:
+        model = Client
+
+admin.site.register(Client, ClientAdmin)

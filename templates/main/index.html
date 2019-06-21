@@ -7,7 +7,7 @@
 
 {% block content %}
 <main class="main">
-  <div class="slider" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url({% static '/img/slider.jpg' %}) center/cover no-repeat">
+  <div class="slider">
     <article class="slider__item">
       <h3 class="slider__header">
         Lorem, ipsum dolor.
@@ -45,7 +45,7 @@
     <h2 class="hidden">Цены</h2>
     <ul class="price__list">
       <li class="price__item cat cat--auto">
-        <img class="cat__img cat__img--auto" src="{% static '/img/auto.png' %}" alt="Категория B">
+        <img class="cat__img cat__img--auto" src="{% static 'img/auto.png' %}" alt="Категория B">
         <p class="cat__name">В</p>
         <div class="cat__content cat__content--auto">   
           <p class="cat__price cat__price--auto">30 000₽</p>
@@ -53,7 +53,7 @@
         </div>     
       </li>
       <li class="price__item cat cat--moto">
-        <img class="cat__img cat__img--moto" src="{% static '/img/moto.png' %}" alt="Категория А">
+        <img class="cat__img cat__img--moto" src="{% static 'img/moto.png' %}" alt="Категория А">
         <p class="cat__name">A</p>
         <div class="cat__content cat__content--moto">
           <p class="cat__price cat__price--moto">12 000₽</p>
@@ -86,8 +86,8 @@
   <section class="sale">
     <h2 class="hidden">Акция на одновременное прохождение категорий A и B</h2>
     <div class="sale__wrapper">  
-    <img class="sale__img sale__img--moto" src="{% static '/img/moto.png' %}" alt="Категория B">    
-      <img class="sale__img sale__img--auto" src="{% static '/img/auto.png' %}" alt="Категория B">
+    <img class="sale__img sale__img--moto" src="{% static 'img/moto.png' %}" alt="Категория B">    
+      <img class="sale__img sale__img--auto" src="{% static 'img/auto.png' %}" alt="Категория B">
       <p class="sale__cat">A+B</p>
       <div class="sale__content">
         <p class="sale__header">АВТОАРИФМЕТИКА A+B=45 000 рублей</p>
