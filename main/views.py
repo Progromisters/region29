@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from .models import Client
 from .forms import ClientForm
 
@@ -16,5 +16,7 @@ def feedback(request):
         if form.is_valid():
             form.save()
         else:
-            print(form.errors)
-    return render(request, 'main/index.html', locals())
+            response = {}
+            for i in form.errors:
+                response[i] = form.errors[i][0]
+    return JsonResponse({'response':response, 'result': 'error'})

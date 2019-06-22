@@ -14,7 +14,7 @@ class ClientForm(forms.ModelForm):
     }), error_messages={
         'required': _('Введите имя')
     })
-    phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message=_('Неверный формат номера'))
+    phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message='No format')
     phone = forms.CharField(validators=[phone_regex], max_length=12, required=True, widget=forms.TextInput(attrs={
         'id': 'phone',
         'class': 'app__input',

@@ -13,10 +13,13 @@ $(document).ready(function(){
             type: 'POST',
             data: data,
             cache: true,
-            success: function(){
+            success: function(data){
                 console.log('ok');
                 $('#name').val('');
                 $('#phone').val('');
+                if (data['result']=='error'){
+                    // здесь всплывает окно у $('#phone')
+                }
             },
             error: function(){
                 console.log("error");
