@@ -6,3 +6,5 @@ static/assets/libs/*
 /package-lock.json
 .vscode/
 /smart-grid-config.js
+main/__pycache__/
+main/migrations/__pycache__/
