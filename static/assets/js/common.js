@@ -15,9 +15,11 @@ $(document).ready(function(){
 			cache: true,
 			success: function(data){
 				console.log('ok');
-				console.log(data);
 				$('#name').val('');
 				$('#phone').val('');
+				if (data['result']=='ok'){
+				  alert('Заявка получена');
+        }
 				if (data['result']=='error'){
 					$('#phone').addClass('app__input--error');
 					console.log(data.response.phone); //сообщение об ошибке
@@ -30,16 +32,13 @@ $(document).ready(function(){
 	});
 });
 
-$('#phone').click(() => {
+$('#phone').click(function(){
 	$('#phone').removeClass('app__input--error');
 });
 
-$('#name').click(() => {
+$('#name').click(function(){
 	$('#name').removeClass('app__input--error');
 });
-
-
-
 
 $('.slider').slick({
 	infinite: true,
