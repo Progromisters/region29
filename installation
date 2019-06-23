@@ -14,13 +14,14 @@ pip install django django-livereload-server
 npm init  		# создание package.json
 
 -Установка
-npm i -g gulp bower
+npm i -g gulp bower eslint
 
 -Сохранение в package.json
 npm i gulp --save-dev	# создание node_modules
 
 -Сохранение в package.json плагинов
 npm i gulp-sass gulp-concat gulp-uglifyjs gulp-clean-css gulp-rename gulp-autoprefixer gulp-notify gulp-livereload --save-dev
+
 
 -Скачать git
 
