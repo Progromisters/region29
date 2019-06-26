@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from .models import Price
 from .forms import ClientForm
+from django.core.mail import send_mail
 
 
 def home(request):
@@ -16,9 +17,17 @@ def home(request):
 def feedback(request):
     if request.POST:
         form = ClientForm(request.POST)
-        print(form.is_valid())
         if form.is_valid():
             form.save()
+            
+            name = request.POST['name']
+            phone = request.POST['phone']
+            subject = 'Новый клиент!'
+            message = 'Имя: '+name+'; Номер телефона: '+phone
+            sender = 'django4manager@gmail.com'
+            recipient = 'kostyajetjet@yandex.ru'                                # !!!изменить получателя!!!
+            send_mail(subject, message, sender, [recipient], fail_silently=False)
+
             return JsonResponse({'result': 'ok'})
         else:
             response = {}
