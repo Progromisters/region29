@@ -6,6 +6,7 @@
   padding: 0
   overflow: hidden
   cursor: pointer
+  // display: flex
   &__list
     +row-flex()
     margin: 0
@@ -14,12 +15,39 @@
     width: 50%
     margin: 0
     background-color: $yellow 
+    &--col-left
+      width: 100%
+  &__content
+    width: 50%
+    &--right
+      color: $coal
+    &--left
+      overflow: visible
+      position: sticky
+      top: 0
+      box-shadow: 0em 0em 2em 0em rgba(0,0,0,0.75)
+
+  &__article
+    margin: 2.5em
+    margin-left: 0
+  &__head
+    font-size: 2.5em
+    font-weight: bold
+  &__text
+    font-size: 1.25em
+  &--col-left
+    display: flex
+    align-items: flex-start
+    cursor: default
+    overflow: visible
+    
 
 .cat
   position: relative
   padding: 3.5em 0
   &__name
     line-height: 0.6em
+    letter-spacing: -0.06em
     position: relative
     color: $white
     font-size: 15em
@@ -34,20 +62,23 @@
     &--moto
       right: 5em
       width: 18em
+    &--left
+      transform: scaleX(-1)
+      left: 5em
   &__content
     position: absolute
     top: 3em
-    &--auto
+    &--right
       right: 3em
-    &--moto
+    &--left
       left: 3em
   &__price
     font-size: 4.2em
     font-weight: bold
     color: $coal
-    &--auto
+    &--right
       right: 0
-    &--moto
+    &--left
       left: 0
   &__text
     position: absolute
@@ -55,13 +86,13 @@
     font-size: 2em
     font-weight: bold
     color: $coal
-    &--auto
+    &--right
       text-align: right
       right: 0
-    &--moto
+    &--left
       text-align: left
       left: 0
-  &--auto
+  &--right
     text-align: left
     padding-left: 3em
     &:hover
@@ -69,7 +100,7 @@
       z-index: 1
       box-shadow: 1em 1em 2em 1em rgba(0,0,0,0.75)
       transform: scale(1.1)
-  &--moto
+  &--left
     text-align: right
     padding-right: 3em
     &:hover
@@ -77,6 +108,12 @@
       z-index: 1
       box-shadow: -1em 1em 2em 1em rgba(0,0,0,0.75)
       transform: scale(1.1)
+  &--col-left
+    &:hover
+      position: relative
+      z-index: 0
+      box-shadow: none
+      transform: none
 
 
 .features
@@ -111,7 +148,6 @@
   +wrapper()
   padding: 0
   position: relative
-  cursor: pointer
   background-color: $yellow
   &__wrapper
     position: relative
