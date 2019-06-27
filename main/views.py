@@ -14,6 +14,13 @@ def home(request):
     form = ClientForm(request.POST or None)
     return render(request, 'main/index.html', locals())
 
+def price(request):
+    priceB = Price.objects.get(category='B')
+    priceA = Price.objects.get(category='A')
+    priceAB = Price.objects.get(category='A+B')
+    form = ClientForm(request.POST or None)
+    return render(request, 'main/price.html', locals())
+
 def feedback(request):
     if request.POST:
         form = ClientForm(request.POST)
