@@ -26,24 +26,6 @@
       position: sticky
       top: 0
       box-shadow: 0em 0em 2em 0em rgba(0,0,0,0.75)
-
-  &__article
-    margin: 2.5em
-    padding-left: 1em
-    margin-left: 0
-    border-left: 4px solid $coal
-  &__head
-    margin-bottom: 0.5em
-    font-size: 2.5em
-    font-weight: bold
-    position: relative
-    display: inline-flex
-    text-shadow: 2px 2px white, 2px -2px white, -2px 2px white, -2px -2px white
-    background-size: 1px 1em;
-    box-shadow: inset 0 -2px white, inset 0 -6px $yellow
-    display: inline;
-  &__text
-    font-size: 1.25em
   &--col-left
     display: flex
     align-items: flex-start
@@ -192,3 +174,36 @@
     margin-top: 0.5em
     font-size: 1.3em
     font-weight: bold
+
+
+.reviewer
+  &__head
+    display: flex
+  &__info
+    margin-left: 1em
+    display: flex
+    flex-direction: column
+    justify-content: center
+  &__img
+    width: 10em
+    height: 10em
+  &__link
+    color: $coal
+    font-size: 1.5em
+
+.reviews
+  margin-bottom: 2em
+  &__buttons
+    display: flex
+    margin: 0 auto
+  &__button
+    width: 2em
+    height: 2em
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $yellow
+    color: $gray
+    font-size: 1.5em
+    font-weight: bold
+    cursor: pointer

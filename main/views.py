@@ -11,6 +11,9 @@ def home(request):
 def price(request):
     return render(request, 'main/price.html')
 
+def reviews(request):
+    return render(request, 'main/reviews.html')
+
 def feedback(request):
     if request.POST:
         form = ClientForm(request.POST)
