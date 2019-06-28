@@ -6,7 +6,7 @@ cd ..
 cd ..
 
 -Устнаовка плагинов
-pip install django django-livereload-server
+pip install django django-livereload-server pillow
 
 -Скачать nodejs
 

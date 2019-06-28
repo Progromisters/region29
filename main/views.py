@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.http import JsonResponse
+from .models import Review
 from .forms import ClientForm
 from django.core.mail import send_mail
 
@@ -12,7 +13,8 @@ def price(request):
     return render(request, 'main/price.html')
 
 def reviews(request):
-    return render(request, 'main/reviews.html')
+    reviews = Review.objects.all()
+    return render(request, 'main/reviews.html', locals())
 
 def feedback(request):
     if request.POST:
