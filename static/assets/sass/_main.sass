@@ -177,6 +177,8 @@
 
 
 .reviewer
+  &__article
+    margin: 0
   &__head
     display: flex
   &__info
@@ -192,12 +194,14 @@
     align-items: center
     border-radius: 50%
     overflow: hidden
+    background-color: $gray
   &__link
     color: $coal
     font-size: 1.5em
 
 .reviews
-  margin-bottom: 2em
+  &__item
+    margin: 2.5em 0
   &__buttons
     display: flex
     margin: 0 auto
