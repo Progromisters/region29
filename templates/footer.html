@@ -14,24 +14,24 @@
       <img class="logo" src="{% static 'img/logo.jpg' %}" alt="Логотип" width="100%" height="100%">
     </div>
     <ul class="footer__nav nav">
-      <li class="nav__item"><a href="#">Главная</a></li>
-      <li class="nav__item"><a href="#">Цены</a></li>
-      <li class="nav__item"><a href="#">Отзывы</a></li>
+      <li class="nav__item"><a href="{% url 'home' %}">Главная</a></li>
+      <li class="nav__item"><a href="{% url 'price' %}">Цены</a></li>
+      <li class="nav__item"><a href="{% url 'reviews' %}">Отзывы</a></li>
       <li class="nav__item"><a href="#">Об автошколе</a></li>
       <li class="nav__item"><a href="#">Лицензии</a></li>
-      <li class="nav__item"><a href="#">Контакты</a></li>
+      <li class="nav__item"><a href="{% url 'contacts' %}">Контакты</a></li>
     </ul>
-    <div class="adress">
-      <h3 class="adress__header">Адрес</h3>
-      <p class="adress__text">
+    <div class="footer__adress footer-adress">
+      <h3 class="footer-adress__header">Адрес</h3>
+      <p class="footer-adress__text">
         г.Северодвинск,
         улица Пионерская, 14а/24,
         офис 8
       </p>
     </div>
-    <div class="contacts">
-        <h3 class="contacts__header">Контакты</h3>
-        <p class="contacts__text">
+    <div class="footer__contacts footer-contacts">
+        <h3 class="footer-contacts__header">Контакты</h3>
+        <p class="footer-contacts__text">
             E-mail: avtoshkola_region29@mail.ru<br>
             Тел.: 8-952-252-72-02, 8-960-001-20-30<br>
         </p>
@@ -39,7 +39,6 @@
           <ul class="social__list">
             <li class="social__item"><a href="https://vk.com/avtoshkola.region29" class="fab fa-vk social__link" target="_blank"></a></li>
             <li class="social__item"><a href="https://www.instagram.com/avtoshkolaregion29/" class="fab fa-instagram social__link" target="_blank"></a></li>
-            
           </ul>
         </div>
       </div>

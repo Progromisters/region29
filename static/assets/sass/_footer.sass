@@ -123,10 +123,15 @@
         transform: none
       &:hover
         background: none
-.adress,
-.contacts
-  +col()
-  +size(3)
+  &__adress,
+  &__contacts
+    +col()
+    +size(3)
+  &__contacts
+    +size(4)
+    
+.footer-adress,
+.footer-contacts 
   &__header
     position: relative
     display: inline-flex
@@ -143,6 +148,3 @@
   &__text
     padding-top: 0.5em
     font-size: 1.3em
-
-.contacts
-  +size(4)

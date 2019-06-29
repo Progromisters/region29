@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="contacts">
+  <iframe class="contacts__map"src="https://yandex.ru/map-widget/v1/?um=constructor%3A0754fd94425d7b0c8a312abdd02f85b497a1920253af0a73b189a4e733fd1e3f&amp;source=constructor" height="450" frameborder="0"></iframe>
+  <article class="contacts__article article">
+    <h2 class="article__head">Контакты</h2>
+    <p class="article__text">
+        E-mail: avtoshkola_region29@mail.ru<br>
+        Тел.: 8-952-252-72-02, 8-960-001-20-30<br>
+        Адрес: г.Северодвинск, улица Пионерская, 14а/24, офис 8
+    </p>
+    <div class="social">
+      <ul class="social__list">
+        <li class="social__item"><a href="https://vk.com/avtoshkola.region29" class="fab fa-vk social__link" target="_blank"></a></li>
+        <li class="social__item"><a href="https://www.instagram.com/avtoshkolaregion29/" class="fab fa-instagram social__link" target="_blank"></a></li>
+      </ul>
+    </div>
+  </article>
+</section>
+{% endblock %} 
