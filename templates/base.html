@@ -1,32 +1,37 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" prefix="og: http://ogp.me/ns#">
 <head>
-	<meta charset="utf-8">
-	<title>{% block title %}{% endblock %}</title>
-	<meta name="description" content="">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">	
-	<!-- Template Basic Images -->
-	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="icon" href="">
-	<link rel="apple-touch-icon" sizes="180x180" href="">	
-	<!-- Custom Browsers Color -->
-	<meta name="theme-color" content="#000">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {% block canonical %}{% endblock %}
+  <title>{% block title %}{% endblock %}</title>
+  {% block description %}{% endblock %}
+  {% block keywords %}{% endblock %}
+  <!-- Template Basic Images -->
+  <meta property="og:image" content="">
+  <link rel="apple-touch-icon" sizes="180x180" href="">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <link rel="icon" href="" type="image/x-icon" />
+  <link rel="shortcut icon" href="" type="image/png">
+  <link rel="icon" href="" type="image/png" />
+  <!-- Custom Browsers Color -->
+  <meta name="theme-color" content="#000">
   <!-- Styles -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">  
-	<link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
 </head>
 <body>
-    {% include 'header.html' %}
+  {% include 'header.html' %}
 
-    {% block content %}
-    {% endblock %}
+  {% block content %}
+  {% endblock %}
 
-    {% include 'footer.html' %}
+  {% include 'footer.html' %}
 
-	<!-- Scripts -->
-	<script src="{% static 'js/scripts.min.js' %}"></script>
+  <!-- Scripts -->
+  <script src="{% static 'js/scripts.min.js' %}"></script>
 </body>
 </html>
