@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.http import JsonResponse
-from .models import Review
+from .models import Slider, Review
 from .forms import ClientForm
 from django.core.mail import send_mail
 
 
 def home(request):
-    return render(request, 'main/index.html')
+    sliders = Slider.objects.all()
+    return render(request, 'main/index.html', locals())
 
 def price(request):
     return render(request, 'main/price.html')

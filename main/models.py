@@ -12,8 +12,20 @@ class Client(models.Model):
         return '{}'.format(self.name)
 
     class Meta:
-        verbose_name = 'Клиент'
+        verbose_name = 'Клиента'
         verbose_name_plural = 'Клиенты'
+
+class Slider(models.Model):
+    title = models.CharField(max_length=32, null=False, blank=False, verbose_name='Заголовок')
+    text = models.TextField(verbose_name='Текст')
+    
+    def __str__(self):
+        return '{}'.format(self.title)
+
+    class Meta:
+        verbose_name = 'Слайдер'
+        verbose_name_plural = 'Слайдеры'
+        ordering = ('id',)
 
 class Price(models.Model):
     category = models.CharField(max_length=32, null=False, blank=False, verbose_name='Категория')
@@ -23,7 +35,7 @@ class Price(models.Model):
         return '{}'.format(self.category)
 
     class Meta:
-        verbose_name = 'Расценка'
+        verbose_name = 'Расценку'
         verbose_name_plural = 'Расценки'
         ordering = ('id',)
         
@@ -39,7 +51,7 @@ class Review(models.Model):
     text = models.TextField(verbose_name='Текст')
 
     def __str__(self):
-        return '{}'.format(self.name, self.surname)
+        return '{} {}'.format(self.name, self.surname)
 
     class Meta:
         verbose_name = 'Отзыв'
