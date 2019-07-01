@@ -220,7 +220,6 @@
 
 
 .contacts
-  +wrapper()
   margin: 2em auto
   display: flex
   align-items: flex-start
@@ -229,4 +228,30 @@
     width: 50%
   &__article
     margin: 0
-    margin-left: 2em
+  &__map
+    box-sizing: border-box
+    padding-right: 2em
+
+.about
+  margin: 2em auto
+  &__aside
+    width: 30%
+  &__content
+    margin: 0
+    width: 70%
+  &__list
+    box-sizing: border-box
+    padding-right: 1em
+  &__item
+    padding: 1.2em
+    border-bottom: 1px solid $yellow   
+    &--last
+      border: none 
+  &__link
+    text-decoration: none
+    color: $coal
+    font-size: 1.2em
+    font-weight: bold
+    &:hover
+      text-decoration: underline
+    

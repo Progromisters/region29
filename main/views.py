@@ -20,6 +20,9 @@ def reviews(request):
 def contacts(request):
     return render(request, 'main/contacts.html')
 
+def about(request):
+    return render(request, 'main/about.html')
+
 def feedback(request):
     if request.POST:
         form = ClientForm(request.POST)
