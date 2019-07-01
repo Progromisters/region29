@@ -2,6 +2,7 @@
 @import "vars"
 
 .price
+  +wrapper()
   padding: 0
   overflow: hidden
   cursor: pointer
@@ -245,11 +246,14 @@
     border-bottom: 1px solid $yellow   
     &--last
       border: none 
-  &__link
+  &__button
     text-decoration: none
     color: $coal
     font-size: 1.2em
     font-weight: bold
+    background: none
+    border: none
+    cursor: pointer
     &:hover
       text-decoration: underline
     

@@ -11,15 +11,27 @@
   <h2 class="hidden">Об автошколе</h2>
   <aside class="about__aside">
     <ul class="about__list">
-      <li class="about__item"><a href="#" class="about__link">Основная информация</a></li>
-      <li class="about__item"><a href="#" class="about__link">Документы</a></li>
-      <li class="about__item"><a href="#" class="about__link">Образование</a></li>
-      <li class="about__item about__item--last"><a href="#" class="about__link">Руководство. Педагогический (научно-педагогический) состав</a></li>
+      <li class="about__item"><button class="about__button" data-content="main">Основная информация</button></li>
+      <li class="about__item"><button class="about__button" data-content="lic">Лицензии</button></li>
+      <li class="about__item"><button class="about__button" data-content="edu">Образование</button></li>
+      <li class="about__item about__item--last"><button class="about__button" data-content="lead">Руководстово и инструкторы</button></li>
     </ul>
   </aside>
-  <article class="article about__content">
+  <article class="article about__content" data-content="main">
     <h1 class="article__head about__head">Основная информация</h1>
-    <p class="article__text about__text">Бла бла бла. Охуенно кататься на автобусе с правами</p>
+    <p class="article__text about__text">Бла бла бла</p>
+  </article>
+  <article class="article about__content hidden" data-content="lic">
+    <h1 class="article__head about__head">Лицензии</h1>
+    <p class="article__text about__text">Бла бла бла</p>
+  </article>
+  <article class="article about__content hidden" data-content="edu">
+    <h1 class="article__head about__head">Образование</h1>
+    <p class="article__text about__text">Бла бла бла</p>
+  </article>
+  <article class="article about__content hidden" data-content="lead">
+    <h1 class="article__head about__head">Руководстово и инструкторы</h1>
+    <p class="article__text about__text">Бла бла бла</p>
   </article>
 </section>
 {% endblock %}
