@@ -17,11 +17,11 @@ def reviews(request):
     reviews = Review.objects.all()
     return render(request, 'main/reviews.html', locals())
 
-def contacts(request):
-    return render(request, 'main/contacts.html')
-
 def about(request):
     return render(request, 'main/about.html')
+
+def contacts(request):
+    return render(request, 'main/contacts.html')
 
 def feedback(request):
     if request.POST:
