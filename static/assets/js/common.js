@@ -48,3 +48,18 @@ $('.slider').slick({
 	prevArrow: '<button class="slick-arrow__slick-prev"><i class="fas fa-chevron-left"></i></button>',
 	nextArrow: '<button class="slick-arrow__slick-next"><i class="fas fa-chevron-right"></i></button>',
 });
+
+//about page
+document.querySelectorAll('.about__button').forEach(button => {
+	button.addEventListener('click', e => {
+		e.preventDefault;
+		const atr = button.getAttribute('data-content');
+		document.querySelectorAll('.about__content').forEach(content =>{
+			if (content.getAttribute('data-content') === atr) {
+				content.classList.remove('hidden');
+			} else {
+				content.classList.add('hidden');
+			}
+		});
+	});
+});
