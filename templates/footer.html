@@ -14,11 +14,11 @@
       <img class="logo" src="{% static 'img/logo.jpg' %}" alt="Логотип" width="100%" height="100%">
     </div>
     <ul class="footer__nav nav">
-      <li class="nav__item"><a href="{% url 'home' %}">Главная</a></li>
-      <li class="nav__item"><a href="{% url 'price' %}">Цены</a></li>
-      <li class="nav__item"><a href="{% url 'reviews' %}">Отзывы</a></li>
-      <li class="nav__item"><a href="#">Об автошколе</a></li>
-      <li class="nav__item"><a href="{% url 'contacts' %}">Контакты</a></li>
+      <li class="nav__item"><a class="nav__link" href="{% url 'home' %}">Главная</a></li>
+      <li class="nav__item"><a class="nav__link" href="{% url 'price' %}">Цены</a></li>
+      <li class="nav__item"><a class="nav__link" href="{% url 'reviews' %}">Отзывы</a></li>
+      <li class="nav__item"><a class="nav__link" href="#">Об автошколе</a></li>
+      <li class="nav__item"><a class="nav__link" href="{% url 'contacts' %}">Контакты</a></li>
     </ul>
     <div class="footer__adress footer-adress">
       <h3 class="footer-adress__header">Адрес</h3>

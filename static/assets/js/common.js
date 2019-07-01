@@ -63,3 +63,6 @@ document.querySelectorAll('.about__button').forEach(button => {
 		});
 	});
 });
+
+//active menu item
+document.querySelector('.nav__link[href="' + window.location.pathname + '"]').classList.add('nav__link--active');
