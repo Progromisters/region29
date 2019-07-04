@@ -233,6 +233,8 @@
 
 .about
   margin: 2em auto
+  &__text
+    padding: 0.5em 0
   &__aside
     width: 30%
   &__content
@@ -264,4 +266,36 @@
       text-decoration: underline
       background-color: $yellow
     
-    
+.lic
+  text-align: center
+  &__link
+    outline: none  
+
+.instructors
+  &__list
+    display: flex
+    justify-content: space-between;
+    flex-wrap: wrap
+    margin-left: -1em
+    margin-bottom: -1em
+  &__item
+    box-sizing: border-box
+    margin-left: 1em
+    margin-bottom: 1em
+    flex: 0 1 calc(50% - 1em)
+    box-shadow: 0 0 1em 0 #000000
+    transition: .3s box-shadow, .3s transform
+    &:hover
+      position: relative
+      transform: scale(1.2)
+      box-shadow: 0 0 2em 0 #000000
+      z-index: 1
+  &__img
+    display: block
+  &__info
+    background: $white
+    vertical-align: center
+    font-size: 1.25em
+    padding: 0.5em
+  &__field
+    font-weight: bold

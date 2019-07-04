@@ -19,11 +19,16 @@
   </aside>
   <article class="article about__content" data-content="main">
     <h1 class="article__head about__head">Основная информация</h1>
-    <p class="article__text about__text">Бла бла бла</p>
+    <p class="article__text about__text">
+    </p>
   </article>
   <article class="article about__content hidden" data-content="lic">
     <h1 class="article__head about__head">Лицензии</h1>
-    <p class="article__text about__text">Бла бла бла</p>
+    <p class="article__text about__text lic">
+      <a class="lic__link" href="{% static 'img/lic1.jpg' %}" target="_blank"><img src="{% static 'img/lic1.jpg' %}" alt="Лицензия. Первая страница" width="50%"></a>
+      <a class="lic__link" href="{% static 'img/lic2.jpg' %}" target="_blank"><img src="{% static 'img/lic2.jpg' %}" alt="Лицензия. Первая страница" width="50%"></a>
+      <a class="lic__link" href="{% static 'img/lic3.jpg' %}" target="_blank"><img src="{% static 'img/lic3.jpg' %}" alt="Лицензия. Первая страница" width="50%"></a>
+    </p>
   </article>
   <article class="article about__content hidden" data-content="edu">
     <h1 class="article__head about__head">Образование</h1>
@@ -31,7 +36,53 @@
   </article>
   <article class="article about__content hidden" data-content="lead">
     <h1 class="article__head about__head">Руководстово и инструкторы</h1>
-    <p class="article__text about__text">Бла бла бла</p>
+    <p class="article__text about__text">
+      Все наши инструктора - опытные водители с инструкторским стажем в среднем 5 и более лет. Всегда спокойные и вежливые.   Вам будет приятно заниматься под их чутким руководством.
+    </p>
+    <p class="article__text about__text instructors">
+      <ul class="instructors__list">
+        <li class="instructors__item">
+          <img src="{% static 'img/oleg.jpg' %}" alt="Инструктор Олег" class="instructors__img">
+          <p class="instructors__info">
+              Инструктор: <span class="instructors__field">Олег</span><br>
+              Автомобиль: <span class="instructors__field">LADA Kalina (Лада Калина)</span><br>
+              Стаж: <span class="instructors__field">16 лет</span><br>
+          </p>
+        </li>
+        <li class="instructors__item">
+          <img src="{% static 'img/oleg.jpg' %}" alt="Инструктор Олег" class="instructors__img">
+          <p class="instructors__info">
+              Инструктор: <span class="instructors__field">Олег</span><br>
+              Автомобиль: <span class="instructors__field">LADA Kalina (Лада Калина)</span><br>
+              Стаж: <span class="instructors__field">16 лет</span><br>
+          </p>
+        </li>
+        <li class="instructors__item">
+          <img src="{% static 'img/oleg.jpg' %}" alt="Инструктор Олег" class="instructors__img">
+          <p class="instructors__info">
+              Инструктор: <span class="instructors__field">Олег</span><br>
+              Автомобиль: <span class="instructors__field">LADA Kalina (Лада Калина)</span><br>
+              Стаж: <span class="instructors__field">16 лет</span><br>
+          </p>
+        </li>
+        <li class="instructors__item">
+          <img src="{% static 'img/oleg.jpg' %}" alt="Инструктор Олег" class="instructors__img">
+          <p class="instructors__info">
+              Инструктор: <span class="instructors__field">Олег</span><br>
+              Автомобиль: <span class="instructors__field">LADA Kalina (Лада Калина)</span><br>
+              Стаж: <span class="instructors__field">16 лет</span><br>
+          </p>
+        </li>
+        <li class="instructors__item">
+          <img src="{% static 'img/oleg.jpg' %}" alt="Инструктор Олег" class="instructors__img">
+          <p class="instructors__info">
+              Инструктор: <span class="instructors__field">Олег</span><br>
+              Автомобиль: <span class="instructors__field">LADA Kalina (Лада Калина)</span><br>
+              Стаж: <span class="instructors__field">16 лет</span><br>
+          </p>
+        </li>
+      </ul>
+    </p>
   </article>
 </section>
 {% endblock %}
