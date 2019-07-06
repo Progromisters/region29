@@ -83,3 +83,13 @@ document.querySelector('.header__nav-button').addEventListener('click', e => {
   e.preventDefault();
   document.querySelector('.main-nav').classList.toggle('main-nav--show');
 });
+
+document.querySelector('.header__button').addEventListener('click', e => {
+  e.preventDefault();
+  document.querySelector('.pop-up').classList.remove('hidden');
+});
+
+document.querySelector('.pop-up__close').addEventListener('click', e => {
+  e.preventDefault();
+  document.querySelector('.pop-up').classList.add('hidden');
+});
