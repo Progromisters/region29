@@ -1,5 +1,6 @@
 .slider
-  +wrapper
+  +wrapper()
+  +md(height, auto)
   padding: 0
   height: 30em
   background-size: cover
@@ -8,6 +9,7 @@
   display: flex
   align-items: center
   &__item
+    padding: 3.5em
     width: 100%
     height: 100%
     display: flex !important
@@ -16,9 +18,15 @@
     color: #ffffff
     outline: none
   &__header
+    +es(font-size, 2em)
+    text-align: center
     font-size: 4em
     font-weight: bold
   &__text
+    +es(font-size, 1em)
+    font-size: 1.5em
+    padding: 0 3.5em
+    text-align: center
     font-size: 1.5em
   &__slick-prev, &__slick-next
     position: absolute

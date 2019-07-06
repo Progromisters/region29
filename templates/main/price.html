@@ -7,9 +7,9 @@
 {% block keywords %}<meta name="keywords" content="автошкола северодвинск цены, автошколы северодвинска стоимость обучения">{% endblock %}
 
 {% block content %}
-<section class="price container price--col-left">
+<section class="price price--col-right">
   <h2 class="hidden">Автошкола Северодвинск цены</h2>
-  <div class="price__content price__content--right price__about">
+  <div class="price__content price__content--left">
     <article class="price__article article">
       <h2 class="article__head">Обучение</h2>
       <p class="article__text">Автошкола «Регион29» осуществляет подготовку водителей разных категорий.
@@ -40,35 +40,33 @@
         успешно сдав теорию ПДД, автодром и вождение в городе, Вы получите водительские права.</p>
     </article>
   </div>
-  <ul class="price__content price__content--left">
-    <li class="price__item cat cat--right price__item--col-left cat--col-left">
-      <img class="cat__img cat__img--auto" src="{% static 'img/auto.png' %}" alt="Категория B">
-      <p class="cat__name">В</p>
-      <div class="cat__content cat__content--right">   
-        <p class="cat__price cat__price--right">{{ priceB.price }}₽</p>
-        <p class="cat__text cat__text--right">Права категории B</p>
+  <ul class="price__content price__content--right">
+    <li class="price__item cat cat--right price__item--col-right cat--col-right">
+      <img class="cat__img cat__img--auto cat__img--col-right" src="{% static 'img/auto.png' %}" alt="Категория B">
+      <p class="cat__name cat__name--col-right">В</p>
+      <div class="cat__content cat__content--right cat__content--col-right">   
+        <p class="cat__price">{{ priceB.price }}₽</p>
+        <p class="cat__text">Права категории B</p>
       </div>     
     </li>
-    <li class="price__item cat cat--right price__item--col-left cat--col-left">
-      <img class="cat__img cat__img--moto cat__img--left" src="{% static 'img/moto.png' %}" alt="Категория А">
-      <p class="cat__name">A</p>
-      <div class="cat__content cat__content--right">
-        <p class="cat__price cat__price--right">{{ priceA.price }}₽</p>
-        <p class="cat__text cat__text--right">Права категории A</p>
+    <li class="price__item cat cat--right price__item--col-right cat--col-right">
+      <img class="cat__img cat__img--moto cat__img--left cat__img--col-right" src="{% static 'img/moto.png' %}" alt="Категория А">
+      <p class="cat__name cat__name--col-right">A</p>
+      <div class="cat__content cat__content--right cat__content--col-right">
+        <p class="cat__price">{{ priceA.price }}₽</p>
+        <p class="cat__text">Права категории A</p>
       </div>
     </li>
   </ul>
 </section>
 <section class="sale">
   <h2 class="hidden">Акция на одновременное прохождение категорий A и B</h2>
-  <div class="sale__wrapper">  
   <img class="sale__img sale__img--moto" src="{% static 'img/moto.png' %}" alt="Категория A">
   <img class="sale__img sale__img--auto" src="{% static 'img/auto.png' %}" alt="Категория B">
-    <p class="sale__cat">A+B</p>
-    <div class="sale__content">
-      <p class="sale__header">АВТОАРИФМЕТИКА A+B={{ priceAB.price }} рублей</p>
-      <p class="sale__text">При обучении сразу на двух категориях “А” и “B” - скидка {{ priceSale.price }} рублей</p>
-    </div>     
-  </div>    
+  <p class="sale__cat">A+B</p>
+  <div class="sale__content">
+    <p class="sale__header">АВТОАРИФМЕТИКА A+B={{ priceAB.price }} рублей</p>
+    <p class="sale__text">При обучении сразу на двух категориях “А” и “B” - скидка {{ priceSale.price }} рублей</p>
+  </div>     
 </section> 
 {% endblock %}

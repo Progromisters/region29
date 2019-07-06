@@ -77,3 +77,9 @@ document.querySelectorAll('.about__button').forEach(button => {
 
 //active menu item
 document.querySelector('.nav__link[href="' + window.location.pathname + '"]').classList.add('nav__link--active');
+
+
+document.querySelector('.header__nav-button').addEventListener('click', e => {
+  e.preventDefault();
+  document.querySelector('.main-nav').classList.toggle('main-nav--show');
+});

@@ -1,12 +1,22 @@
 @import "vars"
 
 .header
+  &__wrapper
+    +row-flex()
+    +size(12)
+    +wrapper()
+    +sm(flex-direction, column)
   &__item
+    +sm(width, 100%)
+    +sm(width, auto)
+    +sm(margin, 0 auto)
     padding: 1.875em 0
     width: 50%    
     display: flex
     align-items: center
   &__button
+    +sm(padding, 0.5em  2em)
+    text-decoration: none
     font-size: 1.625em
     padding: 0.5em 3.75em
     background: $green
@@ -17,6 +27,20 @@
       background: $forest-green
   &__nav
     background: $coal
+  &__nav-button
+    +xs(display, inline-block)
+    display: none
+    width: 100%
+    font-size: 2em
+    font-weight: bold
+    color: $white
+    border: 0
+    background: $coal
+    padding: 0.5em 0
+    outline: none
+    border-bottom: 4px solid $yellow
+    cursor: pointer
+    
     
 
 .main-logo
@@ -26,7 +50,6 @@
 
 .info
   margin-left: 0.9375em
-
   &__header
     font-size: 2.5em
     font-weight: bold
@@ -43,9 +66,9 @@
     font-size: 1.21875em
 
 .nav
-  +col()
-  +size(9)
-  margin: 0
+  +wrapper()
+  padding: 0
+  margin: 0 auto
   display: flex
   justify-content: space-between
   &__item
@@ -71,7 +94,7 @@
       transition: .3s transform
     &:hover::after,
     &:active::after,
-    &:focus::after,
+    &:focus::after
       transform: scaleX(1)
     &:hover,
     &:active,
@@ -92,5 +115,10 @@
         transform: scaleX(1)
         transition: none
 
-  
+.main-nav
+  +xs(display, none)
+  +xs(flex-direction, column)
+  &--show
+    +xs(display, flex)
+
       

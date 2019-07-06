@@ -6,11 +6,6 @@ body
   font-size: 13px
   font-family: $default-font
 
-
-.container
-  +row-flex()
-  +size(12)
-  +wrapper()
   
 .button
   margin-left: auto
@@ -20,12 +15,11 @@ body
   border-radius: 0.2em
 
 .hidden
-  overflow: hidden
-  position: absolute
-  clip: rect(0 0 0 0)
-  width: 1px
-  height: 1px
-  margin: -1px
+  position: absolute !important
+  clip: rect(0 0 0 0) !important
+  width: 1px !important
+  height: 1px !important
+  margin: -1px !important
 
 .wrapper
   +wrapper()
