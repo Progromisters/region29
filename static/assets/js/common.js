@@ -1,12 +1,12 @@
 $(document).ready(function(){
-  var frm = $('#form');
+  let frm = $('.form');
   frm.submit(function(e){
     e.preventDefault(); // не обновляем страницу
-    var data = {};
-    data.name = $('#name').val(); // считываем значение id
-    data.phone = $('#phone').val();
-    var url = frm.attr('action');
-    var csrf_token = $('#form [name="csrfmiddlewaretoken"]').val();
+    let data = {};
+    data.name = $('[name="name"]').val(); // считываем значение id
+    data.phone = $('[name="phone"]').val();
+    let url = frm.attr('action');
+    let csrf_token = $('#form [name="csrfmiddlewaretoken"]').val();
     data['csrfmiddlewaretoken'] = csrf_token;
     $.ajax({
       url: url,
@@ -15,13 +15,13 @@ $(document).ready(function(){
       cache: true,
       success: function(data){
         console.log('ok');
-        $('#name').val('');
-        $('#phone').val('');
+        $('[name="name"]').val('');
+        $('[name="phone"]').val('');
         if (data['result']=='ok'){
           alert('Заявка получена');
         }
         if (data['result']=='error'){
-          $('#phone').addClass('app__input--error');
+          $('[name="phone"]').addClass('app__input--error');
           console.log(data.response.phone); //сообщение об ошибке
         }
       },
@@ -32,12 +32,8 @@ $(document).ready(function(){
   });
 });
 
-$('#phone').click(function(){
-  $('#phone').removeClass('app__input--error');
-});
-
-$('#name').click(function(){
-  $('#name').removeClass('app__input--error');
+$('[name="phone"]').click(function(){
+  $('[name="phone"]').removeClass('app__input--error');
 });
 
 $('.slider').slick({

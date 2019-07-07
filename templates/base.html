@@ -48,26 +48,12 @@
 
   <!-- Scripts -->
   <div class="pop-up hidden">
-    <form action="" class="pop-up__form">
+    <form action="{% url 'feedback' %}" class="form pop-up__form">
+      {% csrf_token %}
       <button class="fas fa-times pop-up__close"></button>
       <h2 class="pop-up__head">Оставить заявку</h2>
-      <label class="pup-up__label">
-        <p class="pop-up__text">Имя:</p>
-        <input type="text" class="pop-up__input">
-      </label>
-      <label class="pup-up__label">
-        <p class="pop-up__text">Телефон:</p>
-        <input type="text" class="pop-up__input">
-      </label>
-      <label class="pup-up__label pop-up__list">
-        <p class="pop-up__text">Категория:</p>
-        <div>
-          <input type="checkbox" class="pop-up__checkbox" name="" id=""><span class="pop-up__text pop-up__cat">A</span>
-        </div>
-        <div>
-          <input type="checkbox" class="pop-up__checkbox" name="" id=""><span class="pop-up__text pop-up__cat">B</span>
-        </div>
-      </label>
+      {{ form.name }}
+      {{ form.phone }}
       <button type="submit" class="button pop-up__button">Отправить заявку</button>
     </form>
   </div>

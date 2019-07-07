@@ -359,7 +359,14 @@
     &:focus
       text-decoration: underline
       background-color: $yellow
-    
+  &__imgs
+    display: flex
+    flex-wrap: wrap
+  &__img
+    +md(width, 100%)
+    box-sizing: border-box
+    padding: 0.5em
+    width: 50%
 .lic
   text-align: center
   &__link
