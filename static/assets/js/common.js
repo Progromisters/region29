@@ -2,6 +2,8 @@ $(document).ready(function(){
   let frm = $('.form');
   frm.submit(function(e){
     let target = e.target.classList[0];
+    $(`.${target} .button`).text('Загрузка...');
+    $(`.${target} .button`).attr('disabled', true);
     e.preventDefault(); // не обновляем страницу
     let data = {};
     data.name = $(`.${target} [name="name"]`).val(); // считываем значение id
@@ -20,14 +22,20 @@ $(document).ready(function(){
         $(`.${target} [name="name"]`).val('');
         $(`.${target} [name="phone"]`).val('');
         if (data['result']=='ok'){
+          $(`.${target} .button`).text('Отправить');
+          $(`.${target} .button`).attr('disabled', false);
           alert('Заявка получена');
         }
         if (data['result']=='error'){
+          $(`.${target} .button`).text('Отправить');
+          $(`.${target} .button`).attr('disabled', false);
           $(`.${target} [name="phone"]`).addClass('error');
           console.log(data.response.phone); //сообщение об ошибке
         }
       },
       error: function(){
+        $(`.${target} .button`).text('Отправить');
+        $(`.${target} .button`).attr('disabled', false);
         console.log('error');
       }
     });
