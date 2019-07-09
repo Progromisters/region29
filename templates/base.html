@@ -48,7 +48,7 @@
 
   <!-- Scripts -->
   <div class="pop-up hidden">
-    <form action="{% url 'feedback' %}" class="form pop-up__form">
+    <form action="{% url 'feedback' %}" class="pop-up__form form">
       {% csrf_token %}
       <button class="fas fa-times pop-up__close"></button>
       <h2 class="pop-up__head">Оставить заявку</h2>

@@ -1,12 +1,14 @@
 $(document).ready(function(){
   let frm = $('.form');
   frm.submit(function(e){
+    let target = e.target.classList[0];
     e.preventDefault(); // не обновляем страницу
     let data = {};
-    data.name = $('[name="name"]').val(); // считываем значение id
-    data.phone = $('[name="phone"]').val();
+    data.name = $(`.${target} [name="name"]`).val(); // считываем значение id
+    data.phone = $(`.${target} [name="phone"]`).val();   
+    console.log(data);
     let url = frm.attr('action');
-    let csrf_token = $('.form [name="csrfmiddlewaretoken"]').val();
+    let csrf_token = $(`.${target} [name="csrfmiddlewaretoken"]`).val();
     data['csrfmiddlewaretoken'] = csrf_token;
     $.ajax({
       url: url,
@@ -15,13 +17,13 @@ $(document).ready(function(){
       cache: true,
       success: function(data){
         console.log('ok');
-        $('[name="name"]').val('');
-        $('[name="phone"]').val('');
+        $(`.${target} [name="name"]`).val('');
+        $(`.${target} [name="phone"]`).val('');
         if (data['result']=='ok'){
           alert('Заявка получена');
         }
         if (data['result']=='error'){
-          $('[name="phone"]').addClass('app__input--error');
+          $(`.${target} [name="phone"]`).addClass('error');
           console.log(data.response.phone); //сообщение об ошибке
         }
       },
@@ -33,7 +35,7 @@ $(document).ready(function(){
 });
 
 $('[name="phone"]').click(function(){
-  $('[name="phone"]').removeClass('app__input--error');
+  $('[name="phone"]').removeClass('error');
 });
 
 $('.slider').slick({

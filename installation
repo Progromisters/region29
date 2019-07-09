@@ -32,6 +32,11 @@ fontawesome - иконки
 ________________________________________
 ДОПОЛНИТЕЛЬНО
 
+-Установка сетки
+npm i smart-grid --save-dev
+Создать конфиг
+node *конфиг*
+
 
 -Создать requirements.txt:
 pip freeze > requirements.txt
