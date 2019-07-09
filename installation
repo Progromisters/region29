@@ -1,5 +1,5 @@
 -Создание и запуск виртуального окружения
-python -m venv env
+py -m venv env
 cd env/Scripts
 activate.bat
 cd ..
