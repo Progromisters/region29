@@ -6,7 +6,7 @@ $(document).ready(function(){
     data.name = $('[name="name"]').val(); // считываем значение id
     data.phone = $('[name="phone"]').val();
     let url = frm.attr('action');
-    let csrf_token = $('#form [name="csrfmiddlewaretoken"]').val();
+    let csrf_token = $('.form [name="csrfmiddlewaretoken"]').val();
     data['csrfmiddlewaretoken'] = csrf_token;
     $.ajax({
       url: url,
