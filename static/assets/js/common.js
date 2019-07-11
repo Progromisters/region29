@@ -1,6 +1,6 @@
-$(document).ready(function(){
+$(document).ready( () => {
   let frm = $('.form');
-  frm.submit(function(e){
+  frm.submit( e => {
     let target = e.target.classList[0];
     $(`.${target} .button`).text('Загрузка...');
     $(`.${target} .button`).attr('disabled', true);
@@ -17,7 +17,7 @@ $(document).ready(function(){
       type: 'POST',
       data: data,
       cache: true,
-      success: function(data){
+      success: data => {
         console.log('ok');
         $(`.${target} [name="name"]`).val('');
         $(`.${target} [name="phone"]`).val('');
@@ -33,7 +33,7 @@ $(document).ready(function(){
           console.log(data.response.phone); //сообщение об ошибке
         }
       },
-      error: function(){
+      error: () => {
         $(`.${target} .button`).text('Отправить');
         $(`.${target} .button`).attr('disabled', false);
         console.log('error');
@@ -42,7 +42,7 @@ $(document).ready(function(){
   });
 });
 
-$('[name="phone"]').click(function(){
+$('[name="phone"]').click( () => {
   $('[name="phone"]').removeClass('error');
 });
 
@@ -69,7 +69,7 @@ $('.lic__slider').slick({
 //about page
 document.querySelectorAll('.about__button').forEach(button => {
   button.addEventListener('click', e => {
-    e.preventDefault;
+    e.preventDefault();
     const atr = button.getAttribute('data-content');
     document.querySelectorAll('.about__content').forEach(content =>{
       if (content.getAttribute('data-content') === atr) {
