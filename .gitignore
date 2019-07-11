@@ -3,9 +3,7 @@
 __pycache__
 .idea/
 env/
-static/assets/libs/*
 db.sqlite3
-/static
 node_modules/
 /package.json
 /package-lock.json
