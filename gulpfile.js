@@ -27,7 +27,7 @@ gulp.task('scripts', function() {
     './static/assets/js/common.js'
   ])
     .pipe(concat('scripts.min.js')) // Собираем их в кучу в новом файле scripts.min.js
-  // .pipe(uglify()) // Сжимаем JS файл, Mifify js (opt.)
+    .pipe(uglify()) // Сжимаем JS файл, Mifify js (opt.)
     .pipe(gulp.dest('./static/assets/js')) // Выгружаем в папку static/assets/js
     .pipe(livereload());
 });

@@ -21,6 +21,8 @@ Ctrl+PauseBreak
 py manage.py makemigrations
 py manage.py migrate
 py manage.py createsuperuser
+py manage.py dumpdata > dump.json
+py manage.py loaddata dump.json
 
 -Admin
 Логин: region29
