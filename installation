@@ -6,7 +6,7 @@ cd ..
 cd ..
 
 -Устнаовка плагинов
-pip install django django-livereload-server pillow psycopg2
+pip install django django-livereload-server pillow psycopg2-binary gunicorn
 
 -Скачать nodejs
 

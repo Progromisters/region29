@@ -26,7 +26,7 @@ SECRET_KEY = 'bnk#=hdx*%9z6z(fvrs=i=t_q!tc7#z7*bz5v(b(s649)*8ff='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['188.225.39.136', 'localhost']
+ALLOWED_HOSTS = ['водитель29.рф','188.225.39.136', 'localhost']
 
 
 # Application definition
@@ -87,8 +87,8 @@ DATABASES = {
         'NAME': 'region29',
         'USER': 'region29user',
         'PASSWORD': 'Guido!956',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
