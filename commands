@@ -23,6 +23,8 @@ py manage.py migrate
 py manage.py createsuperuser
 py manage.py dumpdata > dump.json
 py manage.py loaddata dump.json
+delete from auth_group_permissions; delete from auth_permission; delete from django_admin_log; delete from django_content_type;
+TRUNCATE django_content_type CASCADE;
 
 -Admin
 Логин: region29
