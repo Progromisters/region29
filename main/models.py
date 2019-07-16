@@ -32,7 +32,7 @@ def image_name(instance, filename):
     return 'reviews/{}'.format(filename)
         
 class Review(models.Model):
-    img = models.ImageField(upload_to=image_name, verbose_name='Фото')
+    img = models.ImageField(upload_to='reviews/', verbose_name='Фото')
     name = models.CharField(max_length=16, null=False, blank=False, verbose_name='Имя')
     surname = models.CharField(max_length=16, verbose_name='Фамилия')
     link = models.CharField(max_length=64, verbose_name='Ссылка')
