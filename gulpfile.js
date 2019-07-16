@@ -1,6 +1,6 @@
 var syntax = 'sass';
 
-var gulp 		      	= require('gulp'),
+var gulp 		      = require('gulp'),
   sass 			      = require('gulp-sass'),
   concat        	= require('gulp-concat'),
   uglify        	= require('gulp-uglifyjs'),
