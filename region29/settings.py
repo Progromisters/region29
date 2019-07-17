@@ -157,10 +157,3 @@ STATIC_URL = '/static/'  # URL для шаблонов
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static', 'assets'),
 )
-
-
-# uncomment for push
-# try:
-#     from .settings_prod import *
-# except:
-#     pass
