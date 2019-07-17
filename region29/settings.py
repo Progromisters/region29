@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bnk#=hdx*%9z6z(fvrs=i=t_q!tc7#z7*bz5v(b(s649)*8ff='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['водитель29.рф','188.225.39.136', 'localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -85,7 +85,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'region29',
-        'USER': 'region29user',
+        'USER': 'postgres',
         'PASSWORD': 'Guido!956',
         'HOST': 'localhost',
         'PORT': '',
@@ -155,3 +155,9 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static', 'assets'),
 )
 
+
+# uncomment for push
+try:
+    from .settings_prod import *
+except:
+    pass
