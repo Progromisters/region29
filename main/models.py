@@ -27,24 +27,12 @@ class Slider(models.Model):
         verbose_name_plural = 'Слайдеры'
         ordering = ('id',)
 
-class Price(models.Model):
-    category = models.CharField(max_length=32, null=False, blank=False, verbose_name='Категория')
-    price = models.PositiveSmallIntegerField(null=False, blank=False, verbose_name='Цена')
-    
-    def __str__(self):
-        return '{}'.format(self.category)
-
-    class Meta:
-        verbose_name = 'Расценку'
-        verbose_name_plural = 'Расценки'
-        ordering = ('id',)
-        
 def image_name(instance, filename):
     filename = instance.surname + '.' + filename.split('.')[1]
     return 'reviews/{}'.format(filename)
         
 class Review(models.Model):
-    img = models.ImageField(upload_to=image_name, verbose_name='Фото')
+    img = models.ImageField(upload_to='', verbose_name='Фото')
     name = models.CharField(max_length=16, null=False, blank=False, verbose_name='Имя')
     surname = models.CharField(max_length=16, verbose_name='Фамилия')
     link = models.CharField(max_length=64, verbose_name='Ссылка')

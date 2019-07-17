@@ -45,7 +45,7 @@
       <img class="cat__img cat__img--auto cat__img--col-right" src="{% static 'img/auto.png' %}" alt="Категория B">
       <p class="cat__name cat__name--col-right">В</p>
       <div class="cat__content cat__content--right cat__content--col-right">   
-        <p class="cat__price">{{ priceB.price }}₽</p>
+        <p class="cat__price">37000₽</p>
         <p class="cat__text">Права категории B</p>
       </div>     
     </li>
@@ -53,7 +53,7 @@
       <img class="cat__img cat__img--moto cat__img--left cat__img--col-right" src="{% static 'img/moto.png' %}" alt="Категория А">
       <p class="cat__name cat__name--col-right">A</p>
       <div class="cat__content cat__content--right cat__content--col-right">
-        <p class="cat__price">{{ priceA.price }}₽</p>
+        <p class="cat__price">15000₽</p>
         <p class="cat__text">Права категории A</p>
       </div>
     </li>
@@ -65,8 +65,8 @@
   <img class="sale__img sale__img--auto" src="{% static 'img/auto.png' %}" alt="Категория B">
   <p class="sale__cat">A+B</p>
   <div class="sale__content">
-    <p class="sale__header">АВТОАРИФМЕТИКА A+B={{ priceAB.price }} рублей</p>
-    <p class="sale__text">При обучении сразу на двух категориях “А” и “B” - скидка {{ priceSale.price }} рублей</p>
+    <p class="sale__header">АВТОАРИФМЕТИКА A+B=45000 рублей</p>
+    <p class="sale__text">При обучении сразу на двух категориях “А” и “B” - скидка 2000 рублей</p>
   </div>     
 </section> 
 {% endblock %}
