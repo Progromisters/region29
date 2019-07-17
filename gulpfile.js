@@ -22,8 +22,8 @@ gulp.task('styles', function() { // Создаем таск Sass
 
 gulp.task('scripts', function() {
   return gulp.src([ // Берем все необходимые библиотеки
-    './static/assets/libs/jquery/dist/jquery.min.js', // Берем jQuery
-    './static/assets/libs/slick-1.8.1/slick/slick.min.js',
+    './static/assets/libs/jquery/jquery.min.js', // Берем jQuery
+    './static/assets/libs/slick/slick.js',
     './static/assets/js/common.js'
   ])
     .pipe(concat('scripts.min.js')) // Собираем их в кучу в новом файле scripts.min.js
