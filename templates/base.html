@@ -4,12 +4,13 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   {% block canonical %}{% endblock %}
   <title>{% block title %}{% endblock %}</title>
   {% block description %}{% endblock %}
   {% block keywords %}{% endblock %}
+  <link rel="manifest" href="/manifest.json">
   <!-- Template Basic Images -->
   <meta property="og:image" content="">
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{% static 'img/apple-touch-icon-57x57.png' %}" />
@@ -33,7 +34,7 @@
   <meta name="msapplication-wide310x150logo" content="{% static 'img/mstile-310x150.png' %}" />
   <meta name="msapplication-square310x310logo" content="{% static 'img/mstile-310x310.png' %}" />
   <!-- Custom Browsers Color -->
-  <meta name="theme-color" content="#000">
+    <meta name="theme-color" content="#000">
   <!-- Styles & Scripts-->
     <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
