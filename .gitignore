@@ -22,3 +22,4 @@ main/migrations/
 /package-lock.json
 /requirements.txt
 /smart-grid-config.js
+/static/assets/sass/
