@@ -24,10 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bnk#=hdx*%9z6z(fvrs=i=t_q!tc7#z7*bz5v(b(s649)*8ff='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+# DEBUG = True
 DEBUG = False
 
-#ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['водитель29.рф','188.225.39.136', 'localhost']
 
 
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.sites',
     'main',
+    'analytical',
 ]
 
 MIDDLEWARE = [
@@ -87,7 +88,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'region29',
-        #'USER': 'postgres',
+        # 'USER': 'postgres',
         'USER': 'region29user',
         'PASSWORD': 'Guido!956',
         'HOST': 'localhost',
@@ -137,6 +138,8 @@ EMAIL_HOST_USER = 'django4manager@gmail.com'
 EMAIL_HOST_PASSWORD = 'Guido!956'
 DEFAULT_FROM_EMAIL = 'django'
 DEFAULT_TO_EMAIL = 'django4manager@gmail.com'
+
+YANDEX_METRICA_COUNTER_ID = '54547300'
 
 
 # Static files (CSS, JavaScript, Images)

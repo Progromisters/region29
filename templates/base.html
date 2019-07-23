@@ -1,4 +1,5 @@
 {% load static %}
+{% load yandex_metrica %}
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -46,6 +47,8 @@
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Local Styles -->
   <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+
+  {% yandex_metrica %}
 </head>
 <body>
   {% include 'header.html' %}
