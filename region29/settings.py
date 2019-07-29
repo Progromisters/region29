@@ -28,7 +28,7 @@ SECRET_KEY = 'bnk#=hdx*%9z6z(fvrs=i=t_q!tc7#z7*bz5v(b(s649)*8ff='
 DEBUG = False
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['водитель29.рф','188.225.39.136', 'localhost']
+ALLOWED_HOSTS = ['водитель29.рф', '188.225.39.136', 'localhost']
 
 
 # Application definition
