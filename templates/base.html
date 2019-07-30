@@ -7,6 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="yandex-verification" content="7a349638a0a379b1"/>
   {% block canonical %}{% endblock %}
   <title>{% block title %}{% endblock %}</title>
   {% block description %}{% endblock %}
@@ -57,7 +58,7 @@
   {% endblock %}
 
   {% include 'footer.html' %}
-  <!-- Scripts -->
+
   <div class="pop-up hidden">
     <form action="{% url 'feedback' %}" class="pop-up__form form">
       {% csrf_token %}
@@ -69,6 +70,7 @@
     </form>
   </div>
   
+  <!-- Scripts -->
   <script src="{% static 'js/scripts.min.js' %}"></script>
 </body>
 </html>
