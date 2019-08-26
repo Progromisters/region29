@@ -3,7 +3,9 @@
   <h2 class="app__header">Остались вопросы?</h2>
   <p class="app__text">Если у вас остались вопросы, оставьте свои контакты, и наш менеджер свяжется с Вами</p>
   <form id="form" action="{% url 'feedback' %}" method="POST" class="app__form form">{% csrf_token %}
+    <label for="name" class="app__label">Имя:</label>
     {{ form.name }}
+    <label for="phone" class="app__label">Телефон:</label>
     {{ form.phone }}
     <button class="app__submit button" type="submit">Отправить</button>
   </form>
@@ -35,8 +37,8 @@
       </p>
       <div class="social">
         <ul class="social__list">
-          <li class="social__item"><a href="https://vk.com/avtoshkola.region29" class="fab fa-vk social__link" target="_blank"></a></li>
-          <li class="social__item"><a href="https://www.instagram.com/avtoshkolaregion29/" class="fab fa-instagram social__link" target="_blank"></a></li>
+          <li class="social__item"><a href="https://vk.com/avtoshkola.region29" class="fab fa-vk social__link" target="_blank" rel="noopener" aria-label="Vk"></a></li>
+          <li class="social__item"><a href="https://www.instagram.com/avtoshkolaregion29/" class="fab fa-instagram social__link" target="_blank" rel="noopener" aria-label="Instagram"></a></li>
         </ul>
       </div>
     </div>

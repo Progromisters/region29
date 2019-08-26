@@ -7,8 +7,7 @@ $(document).ready( () => {
     e.preventDefault(); // не обновляем страницу
     let data = {};
     data.name = $(`.${target} [name="name"]`).val(); // считываем значение id
-    data.phone = $(`.${target} [name="phone"]`).val();   
-    console.log(data);
+    data.phone = $(`.${target} [name="phone"]`).val();
     let url = frm.attr('action');
     let csrf_token = $(`.${target} [name="csrfmiddlewaretoken"]`).val();
     data['csrfmiddlewaretoken'] = csrf_token;

@@ -34,7 +34,8 @@ def feedback(request):
             subject = 'Новый клиент!'
             message = 'Имя: '+name+'; Номер телефона: '+phone
             sender = 'django4manager@gmail.com'
-            recipient = 'avtoshkola_region29@mail.ru'
+            # recipient = 'avtoshkola_region29@mail.ru'
+            recipient = 'eclipsealtair@yandex.ru'
             send_mail(subject, message, sender, [recipient], fail_silently=False)
 
             return JsonResponse({'result': 'ok'})

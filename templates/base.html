@@ -1,11 +1,10 @@
 {% load static %}
 {% load yandex_metrica %}
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="yandex-verification" content="7a349638a0a379b1"/>
   {% block canonical %}{% endblock %}
@@ -48,17 +47,13 @@
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Local Styles -->
   <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
-
   {% yandex_metrica %}
 </head>
 <body>
   {% include 'header.html' %}
-
   {% block content %}
   {% endblock %}
-
   {% include 'footer.html' %}
-
   <div class="pop-up hidden">
     <form action="{% url 'feedback' %}" class="pop-up__form form">
       {% csrf_token %}
@@ -69,7 +64,6 @@
       <button type="submit" class="button pop-up__button">Отправить заявку</button>
     </form>
   </div>
-  
   <!-- Scripts -->
   <script src="{% static 'js/scripts.min.js' %}"></script>
 </body>
