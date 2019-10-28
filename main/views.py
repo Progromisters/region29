@@ -32,7 +32,7 @@ def feedback(request):
             name = request.POST['name']
             phone = request.POST['phone']
             subject = 'Новый клиент!'
-            message = 'Имя: '+name+'; Номер телефона: '+phone
+            message = 'Имя: '+name+' | Номер телефона: '+phone
             sender = 'digitalrushmailer@gmail.com'
             recipient = 'avtoshkola_region29@mail.ru'
             send_mail(subject, message, sender, [recipient], fail_silently=False)

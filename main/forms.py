@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from django.core.validators import RegexValidator
+# from django.core.validators import RegexValidator
 from .models import Client
 
 
@@ -11,12 +11,12 @@ class ClientForm(forms.ModelForm):
         'name': 'name',
         'placeholder': 'Ваше имя'
     }))
-    phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message='Неправильный формат')
-    phone = forms.CharField(validators=[phone_regex], max_length=12, required=True, widget=forms.TextInput(attrs={
+    # phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message='Неправильный формат')
+    phone = forms.CharField(max_length=16, required=True, widget=forms.TextInput(attrs={
         'id': 'phone',
         'class': 'app__input',
         'name': 'phone',
-        'placeholder': 'Ваш телефон'
+        'placeholder': '+7(___)___-__-__'
     }))
     
     class Meta:
