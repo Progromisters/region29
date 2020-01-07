@@ -4,7 +4,7 @@
 __pycache__
 .idea/
 .vscode/
-/digitalrush/secret.py
+/region29/secret.py
 env/
 node_modules/
 static/assets/libs/
