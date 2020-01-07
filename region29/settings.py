@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from .secret import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'bnk#=hdx*%9z6z(fvrs=i=t_q!tc7#z7*bz5v(b(s649)*8ff='
+SECRET_KEY = SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
@@ -87,10 +88,10 @@ WSGI_APPLICATION = 'region29.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'region29',
+        'NAME': DB_NAME,
         # 'USER': 'postgres',
-        'USER': 'region29user',
-        'PASSWORD': 'Guido!956',
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -134,13 +135,12 @@ SITE_ID = 1
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'digitalrushmailer@gmail.com'
-EMAIL_HOST_PASSWORD = '3ts-SXg-Ndh-dbE'
-DEFAULT_FROM_EMAIL = 'digitalrush'
-DEFAULT_TO_EMAIL = 'digitalrushmailer@gmail.com'
+EMAIL_HOST_USER = EMAIL
+EMAIL_HOST_PASSWORD = EMAIL_PASSWORD
 
 YANDEX_METRICA_COUNTER_ID = '54547300'
-
+YANDEX_METRICA_WEBVISOR	= True
+YANDEX_METRICA_TRACKHASH = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
